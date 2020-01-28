@@ -1,31 +1,18 @@
-import api from './services/api'
-import React, { useState } from 'react';
-import logo from './assets/logo.svg';
+import React from 'react';
+
 import './App.css';
 
+import logo from './assets/logo.svg';
+
+import Routes from './routes';
+
 function App() {
-  const [] = useState('');
-
-  function hanfleSubmit() {
-
-  }
   return (
     <div className="container">
-      <img src={logo} alt="Aircnc" />
+      <img src={logo} alt="AirCnC" />
 
       <div className="content">
-        <p>
-          Ofereça <strong>spots</strong> para programardores e encontre <strong>talentos</strong> para
-      </p>
-        <form onSubmit={hanfleSubmit}>
-          <label htmlFor="email">E-MAIL *</label>
-          <input
-          value={email}
-            onchange={event => setEmail(event.target.value)}
-            type="email" id="email"
-            placeholder="seu melhor e-mail" />
-          <button className="btn" type="submit">Entrar</button>
-        </form>
+        <Routes />
       </div>
     </div>
   );
